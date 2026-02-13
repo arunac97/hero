@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Multi-Device Layout</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background: #f5f7fa;
+}
+
+/* ================= NAVIGATION ================= */
+nav {
+    background: #1e3c72;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ================= HERO ================= */
+header {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+header p {
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 14px 30px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #ff7b00;
+    color: white;
+}
+
+.btn-secondary {
+    background: white;
+    color: #1e3c72;
+}
+
+/* ================= SECTIONS ================= */
+section {
+    padding: 80px 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* ================= FEATURES ================= */
+.features {
+    display: grid;
+    gap: 30px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ================= STATS ================= */
+.stats {
+    background: #2a5298;
+    color: white;
+    display: grid;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.stat-box h3 {
+    font-size: 2.5rem;
+}
+
+/* ================= FORM ================= */
+.form-container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+input, select, textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1200px) {
+
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 767px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header {
+        padding: 60px 20px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>BrandLogo</h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Stats</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>Modern Responsive Platform</h1>
+    <p>Designed to adapt beautifully across desktop, tablet, and mobile devices with flexible layouts and scalable components.</p>
+    <button class="btn btn-primary">Get Started</button>
+    <button class="btn btn-secondary">Learn More</button>
+</header>
+
+<section>
+<div class="container">
+    <h2>Our Features</h2>
+    <div class="features">
+        <div class="feature-card">
+            <h3>Responsive Grid</h3>
+            <p>Adapts from 3 columns (desktop) to 1 column (mobile).</p>
+        </div>
+        <div class="feature-card">
+            <h3>Optimized UX</h3>
+            <p>Buttons resize for better mobile tapping experience.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Performance Focused</h3>
+            <p>Fast load times and clean scalable code structure.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="stats">
+    <div class="stat-box">
+        <h3>500K+</h3>
+        <p>Users</p>
+    </div>
+    <div class="stat-box">
+        <h3>99.9%</h3>
+        <p>Uptime</p>
+    </div>
+    <div class="stat-box">
+        <h3>24/7</h3>
+        <p>Support</p>
+    </div>
+    <div class="stat-box">
+        <h3>15+</h3>
+        <p>Awards</p>
+    </div>
+</section>
+
+<section>
+<div class="container">
+    <h2>Contact Us</h2>
+    <div class="form-container">
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <select>
+                <option>Select Service</option>
+                <option>Web Development</option>
+                <option>UI/UX Design</option>
+                <option>Cloud Hosting</option>
+            </select>
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+</section>
+
+</body>
+</html>
