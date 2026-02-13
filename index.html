@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Business Web Page</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background: #f4f6f9;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+header p {
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    margin: 8px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: #ff7b00;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #ff9500;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #2a5298;
+}
+
+section {
+    padding: 70px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.feature-card img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.stats {
+    background: #2a5298;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.stat-box {
+    margin: 20px;
+}
+
+.stat-box h3 {
+    font-size: 2.5rem;
+}
+
+.form-section {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: auto;
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+input, select, textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 12px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2a5298;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Innovative Digital Solutions</h1>
+    <p>We create modern, scalable, and fully responsive websites and platforms designed to grow with your business. Our solutions combine technology, design, and performance.</p>
+    <a href="#contact" class="btn btn-primary">Start Now</a>
+    <a href="#about" class="btn btn-outline">Learn More</a>
+</header>
+
+<section id="about">
+<div class="container">
+    <h2>About Our Company</h2>
+    <div class="about">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="Office">
+        <div class="about-text">
+            <p>Since 2014, we have delivered high-performance web solutions across industries including healthcare, finance, retail, and education.</p>
+            <ul>
+                <li>🌍 Clients in 40+ countries</li>
+                <li>🚀 250+ successful deployments</li>
+                <li>📈 35% average business growth for clients</li>
+                <li>🏆 Recognized for innovation and UX design</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+    <h2>Our Services</h2>
+    <div class="features">
+        <div class="feature-card">
+            <img src="https://img.icons8.com/fluency/96/responsive.png"/>
+            <h3>Responsive Design</h3>
+            <p>Optimized layouts for mobile, tablet, and desktop screens.</p>
+        </div>
+        <div class="feature-card">
+            <img src="https://img.icons8.com/fluency/96/security-checked.png"/>
+            <h3>Security</h3>
+            <p>Enterprise-level encryption and secure architecture.</p>
+        </div>
+        <div class="feature-card">
+            <img src="https://img.icons8.com/fluency/96/cloud.png"/>
+            <h3>Cloud Integration</h3>
+            <p>Scalable cloud infrastructure with 99.9% uptime.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+    </div>
+</div>
+</section>
+
+<section class="stats">
+    <div class="stat-box">
+        <h3>1M+</h3>
+        <p>Users</p>
+    </div>
+    <div class="stat-box">
+        <h3>99.9%</h3>
+        <p>Uptime</p>
+    </div>
+    <div class="stat-box">
+        <h3>24/7</h3>
+        <p>Support</p>
+    </div>
+    <div class="stat-box">
+        <h3>12+</h3>
+        <p>Years Experience</p>
+    </div>
+</section>
+
+<section id="contact">
+<div class="container">
+    <h2>Get In Touch</h2>
+    <div class="form-section">
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number">
+            
+            <select required>
+                <option value="">Select Service</option>
+                <option>Web Development</option>
+                <option>Mobile App Development</option>
+                <option>UI/UX Design</option>
+                <option>Cloud Solutions</option>
+            </select>
+
+            <label>
+                <input type="checkbox"> Subscribe to newsletter
+            </label>
+
+            <textarea rows="5" placeholder="Your Message"></textarea>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</div>
+</section>
+
+<footer>
+    <p>© 2026 Digital Solutions Inc. | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
